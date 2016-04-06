@@ -1,0 +1,23 @@
+package com.tutorialspoint;
+
+import java.util.List;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+@Path("/UserService")
+public class UserService {
+
+
+   @GET
+   @Path("/onLoad")
+   @Produces(MediaType.APPLICATION_XML)
+   public ResultSet onLoad(){
+	    ResultSet rs = new ResultSet();
+	   
+	   	System.out.println("Authenticated");
+	   	return rs;
+   }	
+}
